@@ -1,3 +1,9 @@
+## Deployed Address 
+https://rinkeby.etherscan.io/address/0x786f839be025b81e3d8d3514132d3f3c5bc2e382#code
+
+
+## Am ERC20 Token Contract
+
 # Advanced Sample Hardhat Project
 
 This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
