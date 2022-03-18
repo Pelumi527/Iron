@@ -6,15 +6,14 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract IRON is ERC20{
 
-    error InSufficientAmount();
-
     constructor() ERC20("IRON", "FE"){
-        _mint(msg.sender, 1_000_000);
+        _mint(msg.sender, 1_000_000e18);
     }
 
     function buyToken(address receiver) public payable returns(bool){
-        if(msg.value < 1 ether) revert InSufficientAmount();
-        _mint(receiver, 1000);
+        require(msg.value > 0, "InSufficientAmount");
+        uint amount = msg.value * 1000e18;
+        _mint(receiver, amount);
         return true;
     }
 }
